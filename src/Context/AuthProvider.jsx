@@ -14,7 +14,7 @@ const [loding,setLoding] = useState(true)
   };
 
   const logIn=(email,password)=>{
-    console.log("4");
+    // console.log("4");
     
     return signInWithEmailAndPassword(auth, email, password)
   }
@@ -32,11 +32,13 @@ const LogOut =()=>{
 
 
 useEffect(()=>{
-    onAuthStateChanged(auth, (user) => {
+const unSuscribe=onAuthStateChanged(auth, (user) => {
         setUse(user);
         
         setLoding(false)
         })
+return ()=> unSuscribe()
+
 },[])
 
   const userInfo = {

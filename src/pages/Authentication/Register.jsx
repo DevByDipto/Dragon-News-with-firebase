@@ -13,17 +13,17 @@ const email = e.target.email.value
 const password = e.target.password.value
 const name = e.target.name.value
 const photoUrl = e.target.photoUrl.value
-console.log(email,password);
+// console.log(email,password);
 
 signUp(email,password)
 .then((result)=>{
-  console.log(result?.user);
+  // console.log(result?.user);
 
   profileUpdate({displayName:name,photoURL:photoUrl})
   .then(()=>{
 
   }).catch((err)=>{
-console.log(err);
+// console.log(err);
 
   })
 
@@ -31,7 +31,7 @@ console.log(err);
 
   })
 .catch((err)=>{
-console.log(err);
+// console.log(err);
 })
 
 

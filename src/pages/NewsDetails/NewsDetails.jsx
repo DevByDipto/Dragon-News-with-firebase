@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Navigate, NavLink, useLoaderData, useLocation, useNavigate, useParams } from "react-router";
+import { Navigate, NavLink, useLoaderData, useNavigate, useParams } from "react-router";
 import LeftAsid from "../../component/HomeLayout/LeftAsid";
 import Header from "../../component/Header/Header";
 import RightAsid from "../../component/HomeLayout/RightAsid";
@@ -8,9 +8,8 @@ const NewsDetails = () => {
   const [news, setNews] = useState();
   const data = useLoaderData();
   const { id } = useParams();
-  const location = useLocation()
   const navigator = useNavigate()
-console.log(location);
+// console.log(location);
 
   useEffect(() => {
     const selectedNews = data.find((news) => news.id == id);

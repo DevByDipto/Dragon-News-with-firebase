@@ -7,7 +7,7 @@ const Loging = () => {
 const {logIn} = useContext(AuthContext)
 const navigate = useNavigate()
 const {state} = useLocation()
-console.log(state);
+// console.log(state);
 
 
   const handleLogin = (e) => {
@@ -17,7 +17,7 @@ console.log(state);
 
     logIn(email,password)
     .then((result)=>{
-        console.log(result.user);
+        // console.log(result.user);
         navigate(state ? state : '/')
     }).catch((err)=>{
 console.log(err);
